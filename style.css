@@ -1,0 +1,934 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap');
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#ffe4ec;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#ff5d8f;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#ff2f74;
+}
+
+/* ===========================
+   HERO
+=========================== */
+.hero{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.overlay{
+
+    width:100%;
+    height:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    backdrop-filter:blur(2px);
+
+}
+
+.hero-content{
+
+    width:90%;
+    max-width:700px;
+
+    text-align:center;
+
+    background:rgba(255,255,255,.15);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    backdrop-filter:blur(16px);
+
+    -webkit-backdrop-filter:blur(16px);
+
+    border-radius:30px;
+
+    padding:60px 40px;
+
+    box-shadow:
+
+    0 15px 45px rgba(0,0,0,.25);
+
+    animation:fadeUp 1.3s;
+
+}
+
+.hero-content h1{
+
+    font-family:'Great Vibes',cursive;
+
+    color:white;
+
+    font-size:70px;
+
+    margin-bottom:20px;
+
+    text-shadow:2px 2px 12px rgba(0,0,0,.4);
+
+}
+
+.hero-content p{
+
+    color:white;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.btn{
+
+    display:inline-block;
+
+    padding:15px 40px;
+
+    background:linear-gradient(135deg,#ff4d88,#ff87b2);
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(255,77,136,.4);
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 35px rgba(255,77,136,.5);
+
+}
+
+/* ===========================
+   ALBUM
+=========================== */
+
+.album{
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(2px);
+
+}
+.album h2{
+
+    text-align:center;
+
+    font-size:45px;
+
+    margin-bottom:60px;
+
+    color:#ff3d78;
+
+    font-family:'Great Vibes',cursive;
+
+}
+
+.gallery{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+
+}
+
+.card{
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    background:rgba(255,255,255,.14);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.18);
+
+    box-shadow:0 20px 50px rgba(255,77,136,.15);
+
+    transition:.4s;
+
+    position:relative;
+
+}
+
+.card img{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+    transition:.6s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 18px 45px rgba(255,77,136,.25);
+
+}
+
+.card:hover img{
+
+    transform:scale(1.1);
+
+}
+
+/* Overlay saat hover */
+
+.card::before{
+
+    content:"❤️ Kenangan Terindah ❤️";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(255,77,136,.45);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    opacity:0;
+
+    transition:.4s;
+
+    z-index:5;
+
+}
+
+.card:hover::before{
+
+    opacity:1;
+
+}
+
+/* ===========================
+   HEART ANIMATION
+=========================== */
+
+.hero::after{
+
+    content:"❤";
+
+    position:absolute;
+
+    color:white;
+
+    font-size:35px;
+
+    left:15%;
+
+    animation:heartFloat 3s infinite;
+
+}
+
+.hero::before{
+
+    content:"❤";
+
+    position:absolute;
+
+    color:#ffd4e1;
+
+    font-size:25px;
+
+    right:15%;
+
+    animation:heartFloat2 4s infinite;
+
+}
+
+/* ===========================
+   ANIMATION
+=========================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes heartFloat{
+
+    0%{
+
+        transform:translateY(0);
+
+        opacity:0;
+
+    }
+
+    30%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translateY(-220px);
+
+        opacity:0;
+
+    }
+
+}
+
+@keyframes heartFloat2{
+
+    0%{
+
+        transform:translateY(0);
+
+        opacity:0;
+
+    }
+
+    40%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:translateY(-280px);
+
+        opacity:0;
+
+    }
+
+}
+
+/* ===========================
+   RESPONSIVE TABLET
+=========================== */
+
+@media(max-width:900px){
+
+.hero-content{
+
+    padding:45px 25px;
+
+}
+
+.hero-content h1{
+
+    font-size:55px;
+
+}
+
+.album h2{
+
+    font-size:40px;
+
+}
+
+}
+
+/* ===========================
+   RESPONSIVE HP
+=========================== */
+
+@media(max-width:600px){
+
+.hero{
+
+    height:100vh;
+
+}
+
+.hero-content{
+
+    width:92%;
+
+    padding:35px 20px;
+
+}
+
+.hero-content h1{
+
+    font-size:42px;
+
+}
+
+.hero-content p{
+
+    font-size:15px;
+
+}
+
+.btn{
+
+    padding:12px 28px;
+
+    font-size:15px;
+
+}
+
+.album{
+
+    padding:60px 20px;
+
+}
+
+.album h2{
+
+    font-size:34px;
+
+}
+
+.gallery{
+
+    gap:20px;
+
+}
+
+.card img{
+
+    height:240px;
+
+}
+
+.card::before{
+
+    font-size:18px;
+
+}
+
+}
+/* ==========================
+LOVE BERJATUHAN
+========================== */
+
+.love-container{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:10;
+}
+
+.love{
+    position:absolute;
+    top:-50px;
+    color:#ff4f8b;
+    animation:fall linear forwards;
+    user-select:none;
+    text-shadow:0 0 10px pink;
+}
+
+@keyframes fall{
+
+    from{
+        transform:translateY(-50px) rotate(0deg);
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(110vh) rotate(360deg);
+        opacity:0;
+    }
+
+}
+
+#musicPopup{
+
+position:fixed;
+
+inset:0;
+
+background:rgba(0,0,0,.8);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+z-index:5000;
+
+}
+
+.popup-content{
+
+width:90%;
+max-width:420px;
+
+padding:35px;
+
+text-align:center;
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(20px);
+
+border-radius:25px;
+
+color:white;
+
+}
+
+.popup-content button{
+
+margin-top:25px;
+
+padding:14px 35px;
+
+border:none;
+
+border-radius:50px;
+
+background:#ff4f8b;
+
+color:white;
+
+font-size:17px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.popup-content button:hover{
+
+transform:scale(1.08);
+
+}
+
+.couple{
+
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(2px);
+
+}
+
+.couple h2{
+    text-align: center;
+font-size:50px;
+
+margin-bottom:50px;
+
+font-family:"Great Vibes";
+
+color:#ff4f8b;
+
+}
+
+.couple-box{
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+gap:50px;
+
+flex-wrap:wrap;
+
+}
+
+.person{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    text-align:center;
+
+    
+
+max-width:350px;
+
+width:100%;
+
+
+
+    background:white;
+
+    backdrop-filter:blur(20px);
+    border-radius:25px;
+
+    padding:30px;
+
+}
+
+.person:hover{
+
+transform:translateY(-10px);
+
+}
+
+.person img{
+
+width:180px;
+
+height:180px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:6px solid pink;
+
+margin:auto;
+
+}
+
+.person h3{
+
+    max-width:220px;
+
+    text-align:center;
+
+    line-height:1.3;
+
+}
+
+.love-icon{
+
+font-size:60px;
+
+animation:pulse 1s infinite;
+
+}
+
+@keyframes pulse{
+
+50%{
+
+transform:scale(1.25);
+
+}
+
+}
+
+.message{
+
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(2px);
+
+}
+
+.message h2{
+    text-align: center;
+font-size:48px;
+
+font-family:"Great Vibes";
+
+color:#ff4f8b;
+
+margin-bottom:40px;
+
+}
+
+.message-box{
+
+max-width:900px;
+
+margin:auto;
+
+padding:45px;
+
+border-radius:30px;
+
+background:rgba(255,255,255,.55);
+
+backdrop-filter:blur(18px);
+
+box-shadow:0 20px 45px rgba(0,0,0,.1);
+
+line-height:2;
+
+font-size:18px;
+
+}
+
+/* ===============================
+   LOVE TIMER
+================================ */
+
+.love-time{
+
+    background:rgba(255,255,255,.08);
+backdrop-filter:blur(2px);
+
+}
+
+.love-time h2{
+    text-align: center;
+    font-family:'Great Vibes',cursive;
+
+    font-size:55px;
+
+    color:#ff4f8b;
+
+    margin-bottom:15px;
+
+}
+
+.love-time h3{
+    text-align: center;
+    font-family:'Great Vibes',cursive;
+
+    font-size:55px;
+
+    color:#ff0000;
+
+    margin-bottom:15px;
+
+}
+
+.subtitle{
+    text-align: center;
+    font-size:18px;
+
+    color:#ff4f8b;
+
+    margin-bottom:45px;
+
+}
+
+.timer{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+}
+
+.time-box{
+
+    width:130px;
+
+    height:130px;
+
+    background:rgba(255,255,255,.35);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:25px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:0 15px 35px rgba(255,79,139,.15);
+
+    transition:.35s;
+
+}
+
+.time-box:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 40px rgba(255,79,139,.25);
+
+}
+
+.time-box span{
+
+    font-size:42px;
+
+    font-weight:bold;
+
+    color:#ff4f8b;
+
+}
+
+.time-box small{
+
+    margin-top:10px;
+
+    color:#666;
+
+    font-size:15px;
+
+}
+
+@media(max-width:768px){
+
+.time-box{
+
+width:100px;
+height:100px;
+
+}
+
+.time-box span{
+
+font-size:30px;
+
+}
+
+}
+
+main{
+
+    position:relative;
+
+    z-index:5;
+
+}
+
+/*==============================
+    GLOBAL BACKGROUND VIDEO
+===============================*/
+
+#bg-video{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    z-index:-100;
+
+    filter:
+        brightness(.45)
+        saturate(1.15);
+
+    animation:bgZoom 20s linear infinite alternate;
+
+}
+
+#video-overlay{
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.45),
+        rgba(0,0,0,.45)
+    );
+
+    z-index:-99;
+
+}
+
+@keyframes bgZoom{
+
+0%{
+
+transform:scale(1);
+
+}
+
+100%{
+
+transform:scale(1.1);
+
+}
+
+}
+
+#lightbox{
+    position: fixed;
+    inset: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,.9);
+    z-index: 9999;
+}
+
+#lightbox.active{
+    display: flex;
+}

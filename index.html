@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Kita ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&family=Great+Vibes&display=swap" rel="stylesheet">
+</head>
+<body>
+
+       <video id="bg-video" autoplay muted loop playsinline>
+        <source src="video//vidbg.mp4" type="video/mp4">
+    </video>
+
+    <div class="love-container"></div>
+
+<div id="musicPopup">
+
+    <div class="popup-content">
+
+        <h2>❤️ Hai Sayang ❤️</h2>
+
+        <p>
+            Biar lebih bagus, dengerin musiknya dulu yaa.
+        </p>
+
+        <button id="playMusic">
+            Putar Musik
+        </button>
+
+    </div>
+
+</div>
+
+<audio id="bgMusic" loop>
+    <source src="musik/lagu.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Hero -->
+<section class="hero">
+    
+    <div class="overlay">
+
+        <div class="hero-content">
+
+            <h1>Selamat Datang ❤️</h1>
+
+            <p>
+                Terima kasih sudah mengunjungi website kecil ini.
+                Di sini tersimpan berbagai kenangan indah perjalanan kita.
+            </p>
+
+            <a href="#couple" class="btn">
+                Next
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+<section id="couple" class="couple">
+
+<h2>💖 Tentang Kami 💖</h2>
+
+<div class="couple-box">
+
+<div class="person">
+
+<img src="images/piul.jpg">
+
+<h3>Nafiul Ahmad Tamara Ahdani</h3>
+
+<p>Mahasiswa Universitas Gajayana Malang</p>
+
+</div>
+
+<div class="love-icon">
+
+❤️
+
+</div>
+
+<div class="person">
+
+<img src="images/rara.jpg">
+
+<h3>Rara Ayu Mustiningrum</h3>
+
+<p>Mahasiswi Universitas Sayyid Ali Rahmatullah Tulungagung</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="love-time">
+
+    <h2>⏳ Lama Hubungan Kita ❤️</h2>
+      <h3>
+        ❤️ <span id="totalDays">0</span> Hari Bersama ❤️
+    </h3>
+    <p class="subtitle">
+        Perjalanan cinta kita telah berlangsung selama
+    </p>
+
+    <div class="timer">
+
+        <div class="time-box">
+            <span id="years">0</span>
+            <small>Tahun</small>
+        </div>
+
+        <div class="time-box">
+            <span id="months">0</span>
+            <small>Bulan</small>
+        </div>
+
+        <div class="time-box">
+            <span id="days">0</span>
+            <small>Hari</small>
+        </div>
+
+        <div class="time-box">
+            <span id="hours">0</span>
+            <small>Jam</small>
+        </div>
+
+        <div class="time-box">
+            <span id="minutes">0</span>
+            <small>Menit</small>
+        </div>
+
+        <div class="time-box">
+            <span id="seconds">0</span>
+            <small>Detik</small>
+        </div>
+
+    </div>
+
+</section>
+<!-- Album -->
+<section id="album" class="album">
+
+    <h2>Album Kenangan 📸</h2>
+
+    <div class="gallery">
+
+        <div class="card">
+            <img src="images/1.png" class="gallery-img" loading="lazy" alt="Foto 1">
+        </div>
+
+        <div class="card">
+            <img src="images/2.png" class="gallery-img" loading="lazy" alt="Foto 2">
+        </div>
+
+        <div class="card">
+            <img src="images/3.png" class="gallery-img" loading="lazy" alt="Foto 3">
+        </div>
+
+        <div class="card">
+            <img src="images/4.png" class="gallery-img" loading="lazy" alt="Foto 4">
+        </div>
+
+        <div class="card">
+            <img src="images/5.png" class="gallery-img" loading="lazy" alt="Foto 5">
+        </div>
+
+        <div class="card">
+            <img src="images/6.png" class="gallery-img" loading="lazy" alt="Foto 6">
+        </div>
+
+        <div class="card">
+            <img src="images/7.jpg" class="gallery-img" loading="lazy" alt="Foto 7">
+        </div>
+
+        <div class="card">
+            <img src="images/8.jpg" class="gallery-img" loading="lazy" alt="Foto 8">
+        </div>
+
+    </div>
+
+</section>
+
+<section class="message">
+
+<h2>💌 Pesan & Harapan 💌</h2>
+
+<div class="message-box">
+
+<p>
+
+Semoga perjalanan kita selalu dipenuhi kebahagiaan,
+kepercayaan, kesetiaan, dan cinta yang terus tumbuh setiap hari.
+
+Terima kasih telah menjadi bagian terindah dalam hidupku.
+
+Aku berharap kita bisa terus berjalan bersama,
+melewati setiap suka dan duka hingga masa depan nanti.
+
+❤️
+
+</p>
+
+</div>
+
+</section>
+
+<div id="lightbox">
+
+    <span id="closeLightbox">&times;</span>
+
+    <button id="prevBtn">&#10094;</button>
+
+    <img id="lightboxImg" alt="Preview Foto">
+
+    <button id="nextBtn">&#10095;</button>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
